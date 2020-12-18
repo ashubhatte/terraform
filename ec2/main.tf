@@ -32,3 +32,8 @@ output "instance_ip_public_addr" {
   value       = aws_instance.example.*.public_ip
   description = "The public IP address of the main server instance."
 }
+
+output "instance_ip_public_dns" {
+  value       = aws_instance.example.*.public_dns
+  description = "The dns name of the main server instance."
+}
