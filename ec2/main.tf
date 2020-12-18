@@ -24,11 +24,11 @@ resource "aws_instance" "example" {
 }
 
 output "instance_ip_private_addr" {
-  value       = aws_instance.example.private_ip
+  value       = aws_instance.example.*.private_ip
   description = "The private IP address of the main server instance."
 }
 
 output "instance_ip_public_addr" {
-  value       = aws_instance.example.public_ip
+  value       = aws_instance.example.*.public_ip
   description = "The public IP address of the main server instance."
 }
